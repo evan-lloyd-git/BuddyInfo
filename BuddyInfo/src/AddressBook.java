@@ -6,6 +6,7 @@ public class AddressBook {
         book = new LinkedList<BuddyInfo>();
         System.out.println("Address Book");
         System.out.println("Contains linked list of BuddyInfo");
+        System.out.println("BuddyInfo objects can be added or removed");
 
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
 
