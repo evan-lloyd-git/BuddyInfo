@@ -1,14 +1,14 @@
 //A small change to the system added on GitHub
+//Added comments
 import java.util.*;
 public class AddressBook {
     private ArrayList<BuddyInfo> myBuddies;
 
     public AddressBook() {
         myBuddies = new ArrayList<>();
-
     }
     public static void main(String[] args){
-        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        BuddyInfo buddy = new BuddyInfo("Evan", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(0);
