@@ -1,5 +1,4 @@
 //A small change to the system added on GitHub
-//Added comments
 import java.util.*;
 public class AddressBook {
     private ArrayList<BuddyInfo> myBuddies;
