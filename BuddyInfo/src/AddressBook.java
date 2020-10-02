@@ -1,27 +1,27 @@
 import java.util.*;
 public class AddressBook {
-    LinkedList<BuddyInfo> book;
+    private ArrayList<BuddyInfo> myBuddies;
 
     public AddressBook() {
-        book = new LinkedList<BuddyInfo>();
-        System.out.println("Address Book");
-        System.out.println("Contains linked list of BuddyInfo");
-        System.out.println("BuddyInfo objects can be added or removed");
-
-        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        myBuddies = new ArrayList<>();
 
     }
     public static void main(String[] args){
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
-    public void addBuddy(BuddyInfo buddy){
-        book.add(buddy);
+    public void addBuddy(BuddyInfo aBuddy){
+        if(aBuddy != null) {
+            myBuddies.add(aBuddy);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        book.remove(buddy);
+    public BuddyInfo removeBuddy(int index){
+        if(index >= 0 && index < myBuddies.size()){
+            return myBuddies.remove(index);
+        }
+        return null;
     }
 }
